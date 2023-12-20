@@ -146,10 +146,37 @@ button {
 
 /* Theme Options */
 
-#color-options {
-  margin-top: 20px;
-}
-
 #toggle-theme {
   margin-top: 10px;
+  background-color: #ddd;
+  border: none;
+  color: #333;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.icon {
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.3s;
+}
+
+#sun-icon {
+  opacity: 1;
+}
+
+#moon-icon {
+  opacity: 0;
+}
+
+body.dark-theme #sun-icon {
+  opacity: 0;
+}
+
+body.dark-theme #moon-icon {
+  opacity: 1;
 }

@@ -6,6 +6,18 @@ let turn = PLAYER_X;
 const boardState = Array(tiles.length);
 boardState.fill(null);
 
+// Change theme
+const toggleButton = document.getElementById('toggle-theme');
+const moonIcon = document.getElementById('moon-icon');
+const sunIcon = document.getElementById('sun-icon');
+
+toggleButton.addEventListener('click', function () {
+  document.body.classList.toggle('light-theme');
+  const isLightTheme = document.body.classList.contains('light-theme');
+  moonIcon.style.opacity = isLightTheme ? '1' : '0';
+  sunIcon.style.opacity = isLightTheme ? '0' : '1';
+});
+
 // Color Options
 document.getElementById('line-color').addEventListener('input', function () {
   document.documentElement.style.setProperty('--line-color', this.value);
@@ -13,11 +25,6 @@ document.getElementById('line-color').addEventListener('input', function () {
 
 document.getElementById('x-o-color').addEventListener('input', function () {
   document.documentElement.style.setProperty('--x-o-color', this.value);
-});
-
-// Change theme
-document.getElementById('toggle-theme').addEventListener('click', function () {
-  document.body.classList.toggle('light-theme');
 });
 
 //Elements

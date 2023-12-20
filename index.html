@@ -9,15 +9,23 @@
   </head>
   <body>
     <h1>Tic Tac Toe</h1>
-      <!-- ... (existing code) -->
-  <label for="line-color">Grid Color:</label>
-  <input type="color" id="line-color" value="#4B0082" />
 
-  <label for="x-o-color">X/O Color:</label>
-  <input type="color" id="x-o-color" value="#74ee15" />
 
-  <button id="toggle-theme" style="cursor: pointer;">Toggle Theme</button>
+  <!-- Theme code -->
+  <!-- <button id="toggle-theme" style="cursor: pointer;">Toggle Theme</button> -->
+  <div id="color-options">
 
+    <label for="line-color">Grid Color:</label>
+    <input type="color" id="line-color" value="#4B0082" />
+  
+    <label for="x-o-color">X/O Color:</label>
+    <input type="color" id="x-o-color" value="#74ee15" />
+
+    <button id="toggle-theme">
+      <span class="icon" id="moon-icon">&#127769;</span>
+      <span class="icon" id="sun-icon">&#9728;</span>
+    </button>
+  <!-- Theme code ends -->
     <div id="board">
       <div data-index="1" class="tile right-border bottom-border"></div>
       <div data-index="2" class="tile right-border bottom-border"></div>
